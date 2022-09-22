@@ -61,7 +61,9 @@ const Search = ({ properties }) => {
   );
 };
 
+// Upon loading the search page, execute the fetch to return results
 export async function getServerSideProps({ query }) {
+  // Check active query, if a query doesn't exist, use default values
   const purpose = query.purpose || 'for-rent';
   const rentFrequency = query.rentFrequency || 'yearly';
   const minPrice = query.minPrice || '0';
