@@ -19,14 +19,18 @@ const SearchFilters = () => {
   const router = useRouter();
   const [filter, setFilters] = useState(filterData);
 
-  // Update the URL endpoint to execute the serverside fetch
+  // Update the URL endpoint to execute the server side fetch
   const searchProperties = (filterValues) => {
     const path = router.pathname;
     const { query } = router;
     const values = getFilterValues(filterValues);
 
     values.forEach((item) => {
-      query[item.name] = item.value;
+      // 'item.value' - Ensures we only update the endpoints with items we clicked on
+      // 'filterValues?.[item.name]' - Ensures it keeps adding on to the link vs. replacing existing values
+      if (item.value && filterValues?.[item.name]) {
+        query[item.name] = item.value;
+      }
     });
     router.push({ pathname: path, query });
   };
