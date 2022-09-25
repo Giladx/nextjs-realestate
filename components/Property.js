@@ -56,7 +56,9 @@ const Property = ({
                 </Text>
               </Flex>
               <Box>
-                <Avatar size="sm" src={agency.logo.url} />
+                {agency?.logo.url && (
+                  <Avatar size="sm" src={agency?.logo.url} />
+                )}
               </Box>
             </Flex>
             <Flex
