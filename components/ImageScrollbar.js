@@ -55,10 +55,9 @@ const ImageScrollbar = ({ data }) => {
               placeholder="blur"
               blurDataURL={item.url}
               src={item.url}
-              objectFit="contain"
-              width={750}
+              width={1000}
               height={500}
-              sizes="(max-width:500px) 100px, (max-width: 1024px), 400px, 1000px"
+              sizes="(max-width: 500px) 100px, (max-width: 1023px) 400px, 1000px"
             />
           </Box>
         );
