@@ -39,7 +39,6 @@ const Banner = ({
 export default function Home({ forSale, forRent }) {
   return (
     <Box>
-      <h1>Hello World</h1>
       <Banner
         purpose="RENT A HOME"
         title="Rental home for"
