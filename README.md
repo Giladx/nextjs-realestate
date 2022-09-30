@@ -50,7 +50,12 @@ npm run dev
 - Next.js
 - React.js
 - React-icons
+- Chakra-ui
 - Mongoose
+- MongoDB
+- Nprogress
+- Emotion
+- Millify
 - Axios
 - Vercel
 - Node.js
